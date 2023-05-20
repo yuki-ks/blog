@@ -1,0 +1,15 @@
+---
+import Card from "./Card.astro"
+---
+
+<style>
+  .post {
+    font-family: 'Andika, Noto Sans JP', sans-serif;
+  }
+</style>
+
+<Card theme="light">
+  <div class="post">
+    <slot />
+  </div>
+</Card>

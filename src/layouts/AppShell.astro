@@ -1,0 +1,68 @@
+---
+import Header from "../components/Header.astro";
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>k1N0's Blog</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+ 
+      width: 100%;
+      height: 100%;
+
+      position: relative;
+
+      font-family: 'Andika', sans-serif;
+    }
+
+    .container {
+      width: 100%;
+      height: 100%;
+
+      position: relative;
+    }
+
+    .header-container {
+      width: 100%;
+
+      position: fixed;
+      z-index: 1;
+    }
+
+    .contents-container {
+      padding: 48px 16px 16px 16px;
+
+      height: 100%;
+      width: 100%;
+
+      position: relative;
+
+      background-image: url("../../public/souya.jpeg");
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+
+      box-sizing: border-box;
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Andika:wght@400;700&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="header-container">
+      <Header />
+    </div>
+    <div class="contents-container">
+      <slot/>
+    </div>
+  </div> 
+</body>
+</html>
